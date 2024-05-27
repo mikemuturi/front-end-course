@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs") %>
+<body>
+
+    <!-- <% const name = 'Mario' %> -->
+    <nav>
+        <div class="site-title">
+             <p> <%= name %> </p> 
+            
+             <a href="/"><h1>Blog Mike</h1></a>
+            <p>Mike Site</p>
+        </div>
+        <ul>
+            <li><a href="/">Blogs</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/blogs/create">New Blog</a></li>
+        </ul>
+    </nav> 
+    
+
+    <div class="blogs content">
+        <h2>All Blogs</h2>
+        <% if (blogs.length > 0) { %>
+            <% blogs.forEach(blog => { %>
+                <h3 class="title"> <%= blog.title %></h3>
+                <p class="snippet"> <%= blog.snippet %></p>
+                <% }) %>
+
+         <% }  else {%>
+            <p>There is no blog to display</p>
+            <% } %>
+    </div>
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>

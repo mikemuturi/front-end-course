@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs") %>
+<body>
+    <nav>
+        <div class="site-title">
+            <a href="/"><h1>Blog Mike</h1></a>
+            <p>A Mike Site</p>
+        </div>
+        <ul>
+            <li><a href="/">Blogs</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/blogs/create">New Blog</a></li>
+        </ul>
+    </nav>
+
+    <div class="create-blog content">
+        <form>
+            <label for="title">Blog title:</label>
+            <input type="text" id="title" required>
+            <label for="snippet">Blog Snippet:</label>
+            <input type="text" id="snippet" required>
+            <label for="body">Blog body:</label>
+            <textarea id="body" required></textarea>
+            <button>Submit</button>
+        </form>
+        
+
+    </div>
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>
